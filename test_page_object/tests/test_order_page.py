@@ -1,8 +1,10 @@
+import allure
 import pytest
 import datetime
 
 
 class TestOrderPage:
+    @allure.title('Проверка позитивного сценария заказа самоката.')
     @pytest.mark.parametrize("is_header_button, name, surname, address, metro, phone, delivery_date, rent_period",
                              [(True, 'Котик', 'Котейкин', 'ул. Котиков, д. 5', 'Лубянка', '89123456789',
                               datetime.date.today().day, 'сутки'),

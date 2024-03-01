@@ -1,9 +1,11 @@
+import allure
 import pytest
 from data import Answers
 
 
 class TestMainPage:
 
+    @allure.title('Проверка выпадающего списка в разделе «Вопросы о важном».')
     @pytest.mark.parametrize(
         "num, expected_result",
         [

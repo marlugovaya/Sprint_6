@@ -1,6 +1,9 @@
+import allure
+
 from test_page_object.locators.main_page_locators import MainPageLocators
 
 class TestHeaderPage:
+    @allure.title('Проверка нажатия на логотип Самоката.')
     def test_click_scooter_logo(self, header_page, main_page):
         main_page.click_order_button(True)
         header_page.click_scooter()
